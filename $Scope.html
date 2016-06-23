@@ -5,11 +5,10 @@
 </head>
 <body>
     <div ng-controller="SimpleController">
-        <h3>Adding a Simple Controller</h3>
         <input type="text" ng-model="name" />
         <br>
         <ul>
-            <li ng-repeat="cust in customers | filter:name">{{cust.name}} - {{cust.city}}</li>
+            <li ng-repeat="personName in names | filter:name"> {{ personName.name }} - {{ personName.city }} </li>
         </ul>
     </div>
     
@@ -17,7 +16,7 @@
     <script>
         function SimpleController($scope) {
             
-            $scope.customers = [
+            $scope.names = [
                 {name:'Han Han',city:'ShangHai'},
                 {name:'Lao Luo',city:'BeiJing'},
                 {name:'Dan Wahlin',city:'Arizona'},
